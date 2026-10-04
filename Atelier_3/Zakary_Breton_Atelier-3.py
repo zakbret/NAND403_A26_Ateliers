@@ -9,20 +9,24 @@ class MessageBoard(QWidget):
     def create_ui(self):
         layout = QVBoxLayout(self)
         label = QLabel("Message board")
-        boite_texte = QTextEdit()
+        self.boite_texte = QTextEdit()
         bouton = QPushButton("Enter")
+        bouton.clicked.connect(self.on_click)
         layout.addWidget(label)
-        layout.addWidget(boite_texte)
+        layout.addWidget(self.boite_texte)
         layout.addWidget(bouton)
         
 
 
 
     def on_click(self):
-        bouton_print = QMessageBox()
-        bouton_print.setText()
-        bouton_print.show()
-        print("on click called")
+        texte = self.boite_texte.toPlainText()
+        message = QMessageBox(self)
+        message.setText(texte)
+        message.setWindowTitle("Affichage réponse")
+        message.show()
+
+
 
  
 def main():
