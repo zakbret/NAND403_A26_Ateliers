@@ -6,7 +6,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QGridLayout,
     QSpinBox,
-    QSpinBox,
     QLabel
 )
 
