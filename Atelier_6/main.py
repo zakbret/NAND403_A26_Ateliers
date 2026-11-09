@@ -1,7 +1,7 @@
 import os
 import sys
 import importlib
-import ui
+import Atelier_6.ui as ui
 importlib.reload(ui)
 
 
